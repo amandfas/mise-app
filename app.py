@@ -1,5 +1,6 @@
 import streamlit as st
 import unicodedata
+import re
 from html import escape
 
 st.set_page_config(page_title="mise. — cozinhe com o que tem", page_icon="🥬", layout="wide")
