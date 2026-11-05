@@ -242,8 +242,8 @@ if st.session_state.get("show_results", False):
             if hits:
                 coverage = len(hits) / len(required)
                 score = coverage + (0.08 * len(optional_hits))
-                matches.append((score, len(hits), len(optional_hits), recipe))
-    matches.sort(key=lambda x: (x[0], x[1], x[2]), reverse=True)
+                matches.append((score, len(hits), optional_hits, recipe))
+    matches.sort(key=lambda x: (x[0], x[1], len(x[2])), reverse=True)
 
     st.markdown("---")
     st.markdown('<div class="section-title">Ideias para a sua cozinha</div>', unsafe_allow_html=True)
