@@ -1,4 +1,4 @@
- import streamlit as st
+import streamlit as st
 import unicodedata
 from html import escape
 
@@ -89,12 +89,7 @@ RECIPES = [
         "name": "Salada morna de grão-de-bico", "time": 15, "category": "Leve",
         "ingredients": ["grão-de-bico", "tomate", "cebola", "azeite"],
         "optional": ["limão", "pepino", "salsinha", "queijo"],
-        "description": "Uma opção leve, saborosa e rica em fibras.",
-        "steps": [
-            "Escorra e enxágue o grão-de-bico cozido ou em conserva.",
-            "Pique o tomate e a cebola em cubinhos.",
-            "Aqueça o grão-de-bico em uma frigideira com um fio de azeite por 3 minutos.",
-            "Misture com o tomate e a cebola.",
+                 "Misture com o tomate e a cebola.",
             "Tempere com sal, pimenta, azeite e limão, se tiver. Finalize com ervas."
         ]
     },
@@ -258,7 +253,7 @@ if st.session_state.get("show_results", False):
                 match_label = "Falta só 1 ingrediente principal"
             else:
                 match_label = f"Faltam {len(missing)} ingredientes principais"
-            with st.container(border=True):
+                 with st.container(border=True):
                 c1, c2 = st.columns([4, 1])
                 with c1:
                     st.markdown(f'<div class="recipe-name">{recipe["name"]}</div>', unsafe_allow_html=True)
